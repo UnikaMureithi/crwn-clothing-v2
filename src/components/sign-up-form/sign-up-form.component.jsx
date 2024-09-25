@@ -1,12 +1,13 @@
 import { useState } from "react"
 
 import FormInput from "../form-input/form-input.component"
-import Button from "../button/button.component"
 
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils"
+
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component"
 
 import "./sign-up-form.styles.scss"
 
@@ -92,7 +93,7 @@ const SignUpForm = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button buttonType="" type="submit">
+        <Button buttonType={BUTTON_TYPE_CLASSES.base} type="submit">
           Sign Up
         </Button>
       </form>
